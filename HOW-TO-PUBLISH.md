@@ -23,12 +23,14 @@ Open http://127.0.0.1:8787 in a browser. For phone and desktop screenshots of ev
 ## 4. Deploy
     npx wrangler login                      # first time only; approve in the browser
     npx wrangler pages project list         # shows the ebbtech project's production branch
-    npx wrangler pages deploy site --project-name ebbtech --branch <production branch>
+    npx wrangler pages deploy site --project-name ebbtech --branch main
 
-Use the production branch shown by `project list`.
+The production branch is `main` (checked November 23, 2026). If in doubt, run
+`npx wrangler pages deployment list --project-name ebbtech --environment production` and use the Branch shown.
 A different `--branch` makes a preview deploy, not a live one.
 
 Never create a new Pages project, and never change domains or DNS.
 
 ## 5. Confirm
 Open https://www.ebbtech.co/, /support.html and /privacy.html (hard refresh) and check the changes are there.
+Cloudflare redirects /support.html to /support and /privacy.html to /privacy; that is normal, and both addresses work.
