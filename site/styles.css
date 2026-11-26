@@ -281,3 +281,17 @@ a:hover { text-decoration: underline; }
     width: 100%;
   }
 }
+
+/* Apple "Download on the App Store" badge: shown unaltered, at least 40px tall,
+   with clear space of at least a quarter of its height on every side. */
+.app-store-badge {
+  display: inline-block;
+  margin: 20px 0;
+  padding: 14px 0;
+  line-height: 0;
+}
+.app-store-badge img {
+  width: auto;
+  height: 54px;
+}
+.app-store-badge:hover { text-decoration: none; }
